@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Your room, the shared spaces and a few gentle house rules at Maison Soleil.">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preload" href="./assets/fonts/fraunces-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/dm-sans-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./style.css">
+
+  <title>The house | Maison Soleil</title>
+</head>
+<body data-page="house">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="layout">
+
+    <!-- ============ Sidebar (same on every page) ============ -->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar__top">
+        <a class="sidebar__logo" href="index.html" aria-label="Maison Soleil, your stay">
+          <img src="./assets/images/logo.svg" alt="" width="107" height="42">
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="sidebar-panel" aria-label="Open menu" data-menu-toggle>
+          <img class="menu-toggle__open" src="./assets/images/icon-menu.svg" alt="" width="20" height="20">
+          <img class="menu-toggle__close" src="./assets/images/icon-close.svg" alt="" width="20" height="20">
+        </button>
+      </div>
+
+      <div class="sidebar__panel" id="sidebar-panel">
+        <!-- Guest navigation -->
+        <nav class="nav" aria-label="Guest navigation">
+          <ul class="nav__list" role="list">
+            <li>
+              <a class="nav__link" href="index.html">
+                <img src="./assets/images/icon-bed.svg" alt="" width="20" height="20">
+                Your stay
+                <span class="nav__badge" aria-label="1 new update">1</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="house.html" aria-current="page">
+                <img src="./assets/images/icon-house.svg" alt="" width="20" height="20">
+                The house
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="around-town.html">
+                <img src="./assets/images/icon-pin.svg" alt="" width="20" height="20">
+                Around town
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="breakfast.html">
+                <img src="./assets/images/icon-breakfast-outline.svg" alt="" width="20" height="20">
+                Breakfast
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="messages.html">
+                <img src="./assets/images/icon-mail.svg" alt="" width="20" height="20">
+                Messages
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Local weather -->
+        <section class="weather" aria-label="Today's weather">
+          <img class="weather__sun" src="./assets/images/icon-weather.svg" alt="" width="80" height="80">
+          <p class="eyebrow weather__place">Today in Cassis</p>
+          <p class="weather__temp">27°</p>
+          <p class="weather__desc">Sunny · light breeze</p>
+        </section>
+
+        <footer class="sidebar__footer">
+          <p>Est. 1987</p>
+          <address>Maison Soleil · 12 Rue des Oliviers · Cassis</address>
+          <p><small>© 2026 Maison Soleil</small></p>
+        </footer>
+      </div>
+    </aside>
+
+    <!-- ============ Main content ============ -->
+    <main class="main" id="main">
+
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">The house · Est. 1987</p>
+          <h1 class="page-header__title">Make yourself <em>at home.</em></h1>
+        </div>
+
+        <div class="page-header__actions">
+          <a class="btn btn--outline" href="around-town.html">Explore Cassis</a>
+          <a class="btn btn--dark" href="messages.html">Message Margaux</a>
+        </div>
+      </header>
+
+      <div class="split">
+        <!-- Our story -->
+        <article class="host-note host-note--flat" aria-labelledby="story-title">
+          <p class="eyebrow eyebrow--sm host-note__label">Our story</p>
+          <img class="host-note__sun" src="./assets/images/icon-sun.svg" alt="" width="49" height="49">
+
+          <h2 class="host-note__title" id="story-title">
+            <span class="host-note__lead">A yellow house above the harbour,</span>
+            <span class="host-note__name">since 1987.</span>
+          </h2>
+          <p class="host-note__text">My parents bought Maison Soleil when the shutters were falling off and the garden was mostly rosemary. Today there are four guest rooms, an olive tree older than all of us, and Poivre, who believes he owns the place.</p>
+
+          <div class="host-note__room">
+            <p class="eyebrow eyebrow--sm">Your host</p>
+            <p class="host-note__room-name">Margaux</p>
+          </div>
+        </article>
+
+        <!-- Your room -->
+        <article class="receipt receipt--flat" aria-labelledby="room-title">
+          <header class="receipt__header">
+            <div>
+              <p class="eyebrow eyebrow--sm">Your room</p>
+              <h2 class="receipt__title" id="room-title">La Garrigue</h2>
+            </div>
+            <p class="receipt__number">Room 03<br>First floor</p>
+          </header>
+
+          <p class="receipt__intro">Named after the wild hillsides of thyme and rosemary behind the house. Whitewashed walls, terracotta floor tiles and a window over the olive garden.</p>
+
+          <dl class="receipt__items">
+            <div class="receipt__row">
+              <dt>Bed</dt>
+              <dd>Queen · linen sheets</dd>
+            </div>
+            <div class="receipt__row">
+              <dt>View</dt>
+              <dd>Olive garden</dd>
+            </div>
+            <div class="receipt__row">
+              <dt>Bathroom</dt>
+              <dd>Rain shower</dd>
+            </div>
+            <div class="receipt__row">
+              <dt>Keeping cool</dt>
+              <dd>Ceiling fan · shutters</dd>
+            </div>
+            <div class="receipt__row">
+              <dt>Sleeps</dt>
+              <dd>2 guests</dd>
+            </div>
+          </dl>
+
+          <footer class="receipt__footer">
+            <p class="eyebrow eyebrow--sm">25 – 29 Apr · 4 nights</p>
+            <img src="./assets/images/icon-barcode.svg" alt="" width="93" height="28">
+          </footer>
+        </article>
+      </div>
+
+      <!-- Shared spaces -->
+      <section class="section" aria-labelledby="spaces-title">
+        <div class="section__heading">
+          <p class="eyebrow">Shared spaces</p>
+          <h2 class="section__title" id="spaces-title">Around the house</h2>
+        </div>
+
+        <div class="info">
+          <article class="info-card info-card--arrival">
+            <header class="info-card__header">
+              <span class="info-card__icon"><img src="./assets/images/icon-sunset.svg" alt="" width="24" height="24"></span>
+              <h3 class="info-card__label">Terrace</h3>
+              <span class="info-card__number" aria-hidden="true">01</span>
+            </header>
+            <p class="info-card__title">Breakfast &amp; sunsets</p>
+            <p class="info-card__sub">Ground floor, facing the sea</p>
+            <p class="info-card__text">The long table under the vine is yours from breakfast until the last glass of rosé. Cushions live in the wooden chest by the door.</p>
+          </article>
+
+          <article class="info-card info-card--olive">
+            <header class="info-card__header">
+              <span class="info-card__icon"><img src="./assets/images/icon-leaf.svg" alt="" width="24" height="24"></span>
+              <h3 class="info-card__label">Garden</h3>
+              <span class="info-card__number" aria-hidden="true">02</span>
+            </header>
+            <p class="info-card__title">Olive trees &amp; a hammock</p>
+            <p class="info-card__sub">Behind the house</p>
+            <p class="info-card__text">Pick a sprig of rosemary for your picnic. The hammock is shared with Poivre, so negotiate politely.</p>
+          </article>
+
+          <article class="info-card info-card--breakfast">
+            <header class="info-card__header">
+              <span class="info-card__icon"><img src="./assets/images/icon-glass.svg" alt="" width="24" height="24"></span>
+              <h3 class="info-card__label">Honesty bar</h3>
+              <span class="info-card__number" aria-hidden="true">03</span>
+            </header>
+            <p class="info-card__title">Help yourself</p>
+            <p class="info-card__sub">In the hall, by the stairs</p>
+            <p class="info-card__text">Local wine, cold drinks and Marseille soap. Take what you like, write it in the little book, and we settle up at check-out.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- House rules -->
+      <section class="section" aria-labelledby="rules-title">
+        <div class="section__heading">
+          <p class="eyebrow">Good to know</p>
+          <h2 class="section__title" id="rules-title">A few gentle house rules</h2>
+        </div>
+
+        <ol class="rules" role="list">
+          <li>
+            <span class="rules__num" aria-hidden="true">01</span>
+            <div>
+              <p class="rules__title">Quiet hours, 22:00 – 08:00</p>
+              <p class="rules__text">Sound carries over the terrace at night. The garden is lovely for late conversations in low voices.</p>
+            </div>
+          </li>
+          <li>
+            <span class="rules__num" aria-hidden="true">02</span>
+            <div>
+              <p class="rules__title">Please don’t feed Poivre</p>
+              <p class="rules__text">Whatever he tells you, he has already eaten. Twice.</p>
+            </div>
+          </li>
+          <li>
+            <span class="rules__num" aria-hidden="true">03</span>
+            <div>
+              <p class="rules__title">No smoking indoors</p>
+              <p class="rules__text">There’s an ashtray on the terrace wall. Mind the dry garden in summer.</p>
+            </div>
+          </li>
+          <li>
+            <span class="rules__num" aria-hidden="true">04</span>
+            <div>
+              <p class="rules__title">Check-out by 11:00</p>
+              <p class="rules__text">Leave your key on the hall table. Your bags can stay with us until the evening.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <footer class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/okafor-onyedikachukwu-flourish">Okafor Onyedikachukwu Flourish</a>.
+      </footer>
+    </main>
+  </div>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>

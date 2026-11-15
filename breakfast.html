@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Breakfast on the terrace at Maison Soleil, 8 to 10:30. Leave a note for tomorrow.">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preload" href="./assets/fonts/fraunces-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/dm-sans-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Breakfast | Maison Soleil</title>
+</head>
+<body data-page="breakfast">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="layout">
+
+    <!-- ============ Sidebar (same on every page) ============ -->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar__top">
+        <a class="sidebar__logo" href="index.html" aria-label="Maison Soleil, your stay">
+          <img src="./assets/images/logo.svg" alt="" width="107" height="42">
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="sidebar-panel" aria-label="Open menu" data-menu-toggle>
+          <img class="menu-toggle__open" src="./assets/images/icon-menu.svg" alt="" width="20" height="20">
+          <img class="menu-toggle__close" src="./assets/images/icon-close.svg" alt="" width="20" height="20">
+        </button>
+      </div>
+
+      <div class="sidebar__panel" id="sidebar-panel">
+        <!-- Guest navigation -->
+        <nav class="nav" aria-label="Guest navigation">
+          <ul class="nav__list" role="list">
+            <li>
+              <a class="nav__link" href="index.html">
+                <img src="./assets/images/icon-bed.svg" alt="" width="20" height="20">
+                Your stay
+                <span class="nav__badge" aria-label="1 new update">1</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="house.html">
+                <img src="./assets/images/icon-house.svg" alt="" width="20" height="20">
+                The house
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="around-town.html">
+                <img src="./assets/images/icon-pin.svg" alt="" width="20" height="20">
+                Around town
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="breakfast.html" aria-current="page">
+                <img src="./assets/images/icon-breakfast-outline.svg" alt="" width="20" height="20">
+                Breakfast
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="messages.html">
+                <img src="./assets/images/icon-mail.svg" alt="" width="20" height="20">
+                Messages
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Local weather -->
+        <section class="weather" aria-label="Today's weather">
+          <img class="weather__sun" src="./assets/images/icon-weather.svg" alt="" width="80" height="80">
+          <p class="eyebrow weather__place">Today in Cassis</p>
+          <p class="weather__temp">27°</p>
+          <p class="weather__desc">Sunny · light breeze</p>
+        </section>
+
+        <footer class="sidebar__footer">
+          <p>Est. 1987</p>
+          <address>Maison Soleil · 12 Rue des Oliviers · Cassis</address>
+          <p><small>© 2026 Maison Soleil</small></p>
+        </footer>
+      </div>
+    </aside>
+
+    <!-- ============ Main content ============ -->
+    <main class="main" id="main">
+
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Breakfast · On the terrace</p>
+          <h1 class="page-header__title">Petit-déjeuner, <em class="nowrap">8 – 10:30.</em></h1>
+        </div>
+      </header>
+
+      <div class="split split--top">
+        <!-- Menu -->
+        <article class="receipt receipt--flat" aria-labelledby="menu-title">
+          <header class="receipt__header">
+            <div>
+              <p class="eyebrow eyebrow--sm">Menu</p>
+              <h2 class="receipt__title" id="menu-title">Today’s table</h2>
+            </div>
+            <p class="receipt__number">Served daily<br>08:00 – 10:30</p>
+          </header>
+
+          <dl class="receipt__items">
+            <div class="receipt__row">
+              <dt>Fresh figs &amp; Marseille honey</dt>
+              <dd>Included</dd>
+            </div>
+            <div class="receipt__row">
+              <dt>Pain au levain, salted butter, apricot jam</dt>
+              <dd>Included</dd>
+            </div>
+            <div class="receipt__row">
+              <dt>Sheep’s yogurt with toasted almonds</dt>
+              <dd>Included</dd>
+            </div>
+            <div class="receipt__row">
+              <dt>Fresh orange juice</dt>
+              <dd>Included</dd>
+            </div>
+            <div class="receipt__row">
+              <dt>Espresso, café crème or herbal tea</dt>
+              <dd>Included</dd>
+            </div>
+            <div class="receipt__row">
+              <dt>Eggs, any style</dt>
+              <dd>Just ask</dd>
+            </div>
+          </dl>
+
+          <div class="receipt__total">
+            <p class="eyebrow">Breakfast × 2 guests</p>
+            <p class="receipt__amount">€ 96.00</p>
+          </div>
+
+          <footer class="receipt__footer">
+            <p class="eyebrow eyebrow--sm">Paid with your booking</p>
+            <img src="./assets/images/icon-barcode.svg" alt="" width="93" height="28">
+          </footer>
+        </article>
+
+        <!-- Note for tomorrow -->
+        <article class="info-card info-card--breakfast" aria-labelledby="note-title">
+          <header class="info-card__header">
+            <span class="info-card__icon"><img src="./assets/images/icon-breakfast.svg" alt="" width="24" height="24"></span>
+            <h2 class="info-card__label" id="note-title">Note for tomorrow</h2>
+          </header>
+          <p class="info-card__title">Gluten-free? Early start?</p>
+          <p class="info-card__sub">Let us know the night before</p>
+
+          <form class="form" data-breakfast-form novalidate>
+            <div class="field">
+              <label for="bf-time">Breakfast time</label>
+              <select id="bf-time" name="time" required aria-describedby="bf-time-error">
+                <option value="">Choose a time</option>
+                <option>08:00</option>
+                <option>08:30</option>
+                <option>09:00</option>
+                <option>09:30</option>
+                <option>10:00</option>
+              </select>
+              <p class="field__error" id="bf-time-error" hidden>Please choose a time.</p>
+            </div>
+
+            <fieldset class="field">
+              <legend>Dietary needs</legend>
+              <div class="checks">
+                <label class="check"><input type="checkbox" name="diet" value="Gluten-free"> Gluten-free</label>
+                <label class="check"><input type="checkbox" name="diet" value="Vegetarian"> Vegetarian</label>
+                <label class="check"><input type="checkbox" name="diet" value="Dairy-free"> Dairy-free</label>
+                <label class="check"><input type="checkbox" name="diet" value="Nut allergy"> Nut allergy</label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="bf-note">Anything else? <span class="field__optional">(optional)</span></label>
+              <textarea id="bf-note" name="note" rows="3" maxlength="240" placeholder="Two espressos, please!"></textarea>
+            </div>
+
+            <button class="btn btn--dark form__submit" type="submit">Save note</button>
+          </form>
+
+          <div class="form-success" data-breakfast-saved tabindex="-1" hidden>
+            <p class="form-success__title">Noted for tomorrow</p>
+            <p class="form-success__text" data-breakfast-summary></p>
+            <button class="btn btn--outline" type="button" data-breakfast-edit>Change note</button>
+          </div>
+
+          <p class="demo-note">Demo: your note is saved on this device only.</p>
+        </article>
+      </div>
+
+      <!-- Good to know -->
+      <section class="section" aria-labelledby="breakfast-info-title">
+        <div class="section__heading">
+          <p class="eyebrow">Good to know</p>
+          <h2 class="section__title" id="breakfast-info-title">How breakfast works</h2>
+        </div>
+
+        <div class="info">
+          <article class="info-card info-card--arrival">
+            <header class="info-card__header">
+              <span class="info-card__icon"><img src="./assets/images/icon-sunset.svg" alt="" width="24" height="24"></span>
+              <h3 class="info-card__label">Where</h3>
+              <span class="info-card__number" aria-hidden="true">01</span>
+            </header>
+            <p class="info-card__title">On the terrace</p>
+            <p class="info-card__sub">Under the vine, facing the sea</p>
+            <p class="info-card__text">On rainy mornings we lay the big table in the kitchen instead. Same figs, slightly fewer views.</p>
+          </article>
+
+          <article class="info-card info-card--wifi">
+            <header class="info-card__header">
+              <span class="info-card__icon"><img src="./assets/images/icon-clock.svg" alt="" width="24" height="24"></span>
+              <h3 class="info-card__label">Early start</h3>
+              <span class="info-card__number" aria-hidden="true">02</span>
+            </header>
+            <p class="info-card__title">Leaving before 8?</p>
+            <p class="info-card__sub">Breakfast basket on request</p>
+            <p class="info-card__text">We’ll leave a basket with bread, fruit and a thermos of coffee outside your door. Just tell us the night before.</p>
+          </article>
+
+          <article class="info-card info-card--olive">
+            <header class="info-card__header">
+              <span class="info-card__icon"><img src="./assets/images/icon-leaf.svg" alt="" width="24" height="24"></span>
+              <h3 class="info-card__label">Every diet</h3>
+              <span class="info-card__number" aria-hidden="true">03</span>
+            </header>
+            <p class="info-card__title">Something for everyone</p>
+            <p class="info-card__sub">Always in the pantry</p>
+            <p class="info-card__text">Gluten-free bread, plant milk and dairy-free yogurt are always on hand. Allergies? Write them in your note.</p>
+          </article>
+        </div>
+      </section>
+
+      <footer class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/okafor-onyedikachukwu-flourish">Okafor Onyedikachukwu Flourish</a>.
+      </footer>
+    </main>
+  </div>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>

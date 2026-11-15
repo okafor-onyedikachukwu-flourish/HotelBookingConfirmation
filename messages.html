@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Messages with Margaux, your host at Maison Soleil.">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preload" href="./assets/fonts/fraunces-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/dm-sans-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Messages | Maison Soleil</title>
+</head>
+<body data-page="messages">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="layout">
+
+    <!-- ============ Sidebar (same on every page) ============ -->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar__top">
+        <a class="sidebar__logo" href="index.html" aria-label="Maison Soleil, your stay">
+          <img src="./assets/images/logo.svg" alt="" width="107" height="42">
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="sidebar-panel" aria-label="Open menu" data-menu-toggle>
+          <img class="menu-toggle__open" src="./assets/images/icon-menu.svg" alt="" width="20" height="20">
+          <img class="menu-toggle__close" src="./assets/images/icon-close.svg" alt="" width="20" height="20">
+        </button>
+      </div>
+
+      <div class="sidebar__panel" id="sidebar-panel">
+        <!-- Guest navigation -->
+        <nav class="nav" aria-label="Guest navigation">
+          <ul class="nav__list" role="list">
+            <li>
+              <a class="nav__link" href="index.html">
+                <img src="./assets/images/icon-bed.svg" alt="" width="20" height="20">
+                Your stay
+                <span class="nav__badge" aria-label="1 new update">1</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="house.html">
+                <img src="./assets/images/icon-house.svg" alt="" width="20" height="20">
+                The house
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="around-town.html">
+                <img src="./assets/images/icon-pin.svg" alt="" width="20" height="20">
+                Around town
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="breakfast.html">
+                <img src="./assets/images/icon-breakfast-outline.svg" alt="" width="20" height="20">
+                Breakfast
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="messages.html" aria-current="page">
+                <img src="./assets/images/icon-mail.svg" alt="" width="20" height="20">
+                Messages
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Local weather -->
+        <section class="weather" aria-label="Today's weather">
+          <img class="weather__sun" src="./assets/images/icon-weather.svg" alt="" width="80" height="80">
+          <p class="eyebrow weather__place">Today in Cassis</p>
+          <p class="weather__temp">27°</p>
+          <p class="weather__desc">Sunny · light breeze</p>
+        </section>
+
+        <footer class="sidebar__footer">
+          <p>Est. 1987</p>
+          <address>Maison Soleil · 12 Rue des Oliviers · Cassis</address>
+          <p><small>© 2026 Maison Soleil</small></p>
+        </footer>
+      </div>
+    </aside>
+
+    <!-- ============ Main content ============ -->
+    <main class="main" id="main">
+
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Messages · 1 new</p>
+          <h1 class="page-header__title">Notes from <em>Margaux.</em></h1>
+        </div>
+      </header>
+
+      <div class="split split--chat">
+        <!-- Conversation -->
+        <section class="chat" aria-labelledby="chat-title">
+          <header class="chat__header">
+            <span class="chat__avatar" aria-hidden="true">M</span>
+            <div>
+              <h2 class="chat__name" id="chat-title">Margaux</h2>
+              <p class="chat__status">Your host · usually replies within the hour</p>
+            </div>
+          </header>
+
+          <ol class="thread" role="list" data-thread>
+            <li class="thread__day"><span>Mon, 20 April</span></li>
+            <li class="bubble bubble--host">
+              <p>Bonjour Lucia! Thank you for booking La Garrigue. If you need anything before you arrive, just write to me here.</p>
+              <time datetime="2026-04-20T09:12">09:12</time>
+            </li>
+            <li class="bubble bubble--guest">
+              <p>Merci Margaux! We’re arriving by train around 14:30. Is it easy to get to you from the station?</p>
+              <time datetime="2026-04-20T18:40">18:40</time>
+            </li>
+            <li class="bubble bubble--host">
+              <p>Very easy. The bus from the station stops near the harbour, six minutes’ walk from our blue door. Or message me when you arrive and I’ll come and get you.</p>
+              <time datetime="2026-04-20T19:05">19:05</time>
+            </li>
+            <li class="thread__day"><span>Fri, 24 April</span></li>
+            <li class="bubble bubble--host">
+              <span class="bubble__tag">New</span>
+              <p>The lemonade is in the fridge and Poivre has already claimed your chair. See you tomorrow! ☀</p>
+              <time datetime="2026-04-24T17:30">17:30</time>
+            </li>
+          </ol>
+
+          <div class="chips quick-replies" role="group" aria-label="Quick replies">
+            <button class="chip chip--text" type="button" data-quick-reply>Can we check in early?</button>
+            <button class="chip chip--text" type="button" data-quick-reply>Where can we park?</button>
+            <button class="chip chip--text" type="button" data-quick-reply>Could we have extra towels?</button>
+          </div>
+
+          <form class="composer" data-composer>
+            <label class="sr-only" for="message">Message Margaux</label>
+            <textarea id="message" name="message" rows="1" placeholder="Write a message…" required></textarea>
+            <button class="btn btn--dark" type="submit">Send</button>
+          </form>
+          <p class="demo-note chat__note">Demo: new messages are saved on this device only.</p>
+        </section>
+
+        <!-- Quick answers -->
+        <aside class="faq" aria-labelledby="faq-title">
+          <p class="eyebrow eyebrow--sm">Before you write</p>
+          <h2 class="faq__title" id="faq-title">Quick answers</h2>
+
+          <details>
+            <summary>What time can we check in?</summary>
+            <p>From 15:00 on Saturday 25 April. Ring the brass bell by the blue door. If we’re out, the key is in the terracotta pot by the olive tree.</p>
+          </details>
+          <details>
+            <summary>Is breakfast included?</summary>
+            <p>Yes, for two guests, every morning from 8:00 to 10:30 on the terrace. You can leave us a note on the <a href="breakfast.html">Breakfast page</a>.</p>
+          </details>
+          <details>
+            <summary>Can we leave our bags after check-out?</summary>
+            <p>Of course. Check-out is at 11:00, and your bags can stay in the hall until the evening.</p>
+          </details>
+          <details>
+            <summary>What’s the Wi-Fi password?</summary>
+            <p>The network is “Le Soleil · Guest”. You’ll find the password on the <a href="index.html">Your stay page</a>, with a copy button.</p>
+          </details>
+        </aside>
+      </div>
+
+      <footer class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/okafor-onyedikachukwu-flourish">Okafor Onyedikachukwu Flourish</a>.
+      </footer>
+    </main>
+  </div>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>

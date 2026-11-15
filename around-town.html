@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Beaches, walks, the market and day trips in Cassis, picked by your host.">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preload" href="./assets/fonts/fraunces-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./assets/fonts/dm-sans-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Around town | Maison Soleil</title>
+</head>
+<body data-page="town">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="layout">
+
+    <!-- ============ Sidebar (same on every page) ============ -->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar__top">
+        <a class="sidebar__logo" href="index.html" aria-label="Maison Soleil, your stay">
+          <img src="./assets/images/logo.svg" alt="" width="107" height="42">
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="sidebar-panel" aria-label="Open menu" data-menu-toggle>
+          <img class="menu-toggle__open" src="./assets/images/icon-menu.svg" alt="" width="20" height="20">
+          <img class="menu-toggle__close" src="./assets/images/icon-close.svg" alt="" width="20" height="20">
+        </button>
+      </div>
+
+      <div class="sidebar__panel" id="sidebar-panel">
+        <!-- Guest navigation -->
+        <nav class="nav" aria-label="Guest navigation">
+          <ul class="nav__list" role="list">
+            <li>
+              <a class="nav__link" href="index.html">
+                <img src="./assets/images/icon-bed.svg" alt="" width="20" height="20">
+                Your stay
+                <span class="nav__badge" aria-label="1 new update">1</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="house.html">
+                <img src="./assets/images/icon-house.svg" alt="" width="20" height="20">
+                The house
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="around-town.html" aria-current="page">
+                <img src="./assets/images/icon-pin.svg" alt="" width="20" height="20">
+                Around town
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="breakfast.html">
+                <img src="./assets/images/icon-breakfast-outline.svg" alt="" width="20" height="20">
+                Breakfast
+              </a>
+            </li>
+            <li>
+              <a class="nav__link" href="messages.html">
+                <img src="./assets/images/icon-mail.svg" alt="" width="20" height="20">
+                Messages
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Local weather -->
+        <section class="weather" aria-label="Today's weather">
+          <img class="weather__sun" src="./assets/images/icon-weather.svg" alt="" width="80" height="80">
+          <p class="eyebrow weather__place">Today in Cassis</p>
+          <p class="weather__temp">27°</p>
+          <p class="weather__desc">Sunny · light breeze</p>
+        </section>
+
+        <footer class="sidebar__footer">
+          <p>Est. 1987</p>
+          <address>Maison Soleil · 12 Rue des Oliviers · Cassis</address>
+          <p><small>© 2026 Maison Soleil</small></p>
+        </footer>
+      </div>
+    </aside>
+
+    <!-- ============ Main content ============ -->
+    <main class="main" id="main">
+
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Around town · Cassis</p>
+          <h1 class="page-header__title">Margaux’s <em>favourite corners.</em></h1>
+        </div>
+
+        <div class="page-header__actions">
+          <a class="btn btn--outline" href="https://www.google.com/maps/search/?api=1&amp;query=Cassis%2C%20France" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </header>
+
+      <p class="lead">Cassis is small enough to walk everywhere. These are the places we send our friends. Times are on foot from our blue door unless we say otherwise.</p>
+
+      <!-- Filters -->
+      <div class="chips filters" role="group" aria-label="Filter places">
+        <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip" type="button" data-filter="beach" aria-pressed="false">Beaches</button>
+        <button class="chip" type="button" data-filter="walk" aria-pressed="false">Walks</button>
+        <button class="chip" type="button" data-filter="food" aria-pressed="false">Food &amp; market</button>
+        <button class="chip" type="button" data-filter="trip" aria-pressed="false">Day trips</button>
+      </div>
+      <p class="sr-only" role="status" data-filter-status></p>
+
+      <!-- Places -->
+      <section class="places" aria-label="Places to visit">
+
+        <article class="info-card info-card--arrival" data-category="walk">
+          <header class="info-card__header">
+            <span class="info-card__icon"><img src="./assets/images/icon-route.svg" alt="" width="24" height="24"></span>
+            <h2 class="info-card__label">Walk</h2>
+            <span class="info-card__number" aria-hidden="true">01</span>
+          </header>
+          <p class="info-card__title">Port de Cassis</p>
+          <p class="info-card__sub">6 min walk</p>
+          <p class="info-card__text">Pastel houses, fishing boats and café terraces along the quay. It’s the heart of town, and where the calanque boats leave from.</p>
+          <p class="tip"><span class="eyebrow eyebrow--sm">Margaux’s tip</span>Come back at golden hour for an apéritif facing the boats.</p>
+        </article>
+
+        <article class="info-card info-card--breakfast" data-category="food">
+          <header class="info-card__header">
+            <span class="info-card__icon"><img src="./assets/images/icon-basket.svg" alt="" width="24" height="24"></span>
+            <h2 class="info-card__label">Food</h2>
+            <span class="info-card__number" aria-hidden="true">02</span>
+          </header>
+          <p class="info-card__title">Provençal market</p>
+          <p class="info-card__sub">Wednesday &amp; Friday mornings · Place Baragnon</p>
+          <p class="info-card__text">Olives, cheese, honey, flowers and fish, a few streets back from the port. Go hungry and say yes to the samples.</p>
+          <p class="tip"><span class="eyebrow eyebrow--sm">Margaux’s tip</span>Wednesday is your check-out day. Leave your bags with us and go.</p>
+        </article>
+
+        <article class="info-card info-card--wifi" data-category="beach">
+          <header class="info-card__header">
+            <span class="info-card__icon"><img src="./assets/images/icon-waves.svg" alt="" width="24" height="24"></span>
+            <h2 class="info-card__label">Beach</h2>
+            <span class="info-card__number" aria-hidden="true">03</span>
+          </header>
+          <p class="info-card__title">Plage de la Grande Mer</p>
+          <p class="info-card__sub">7 min walk</p>
+          <p class="info-card__text">The main town beach, right beside the harbour. Easy, lively and perfect for a quick swim before dinner.</p>
+          <p class="tip"><span class="eyebrow eyebrow--sm">Margaux’s tip</span>Borrow a beach towel from the basket in the hall.</p>
+        </article>
+
+        <article class="info-card info-card--wifi" data-category="beach">
+          <header class="info-card__header">
+            <span class="info-card__icon"><img src="./assets/images/icon-waves.svg" alt="" width="24" height="24"></span>
+            <h2 class="info-card__label">Beach</h2>
+            <span class="info-card__number" aria-hidden="true">04</span>
+          </header>
+          <p class="info-card__title">Plage du Bestouan</p>
+          <p class="info-card__sub">12 min walk</p>
+          <p class="info-card__text">A small pebble beach just west of the port, with very clear water and a view back over the town.</p>
+          <p class="tip"><span class="eyebrow eyebrow--sm">Margaux’s tip</span>Bring water shoes. The pebbles mean business.</p>
+        </article>
+
+        <article class="info-card info-card--arrival" data-category="walk">
+          <header class="info-card__header">
+            <span class="info-card__icon"><img src="./assets/images/icon-route.svg" alt="" width="24" height="24"></span>
+            <h2 class="info-card__label">Walk</h2>
+            <span class="info-card__number" aria-hidden="true">05</span>
+          </header>
+          <p class="info-card__title">Calanque de Port-Miou</p>
+          <p class="info-card__sub">25 min walk</p>
+          <p class="info-card__text">The nearest calanque: a long, narrow inlet of white limestone lined with sailboats. The trail carries on towards Port-Pin and En-Vau.</p>
+          <p class="tip"><span class="eyebrow eyebrow--sm">Margaux’s tip</span>Start early on warm days. There’s little shade after 11.</p>
+        </article>
+
+        <article class="info-card info-card--olive" data-category="trip">
+          <header class="info-card__header">
+            <span class="info-card__icon"><img src="./assets/images/icon-boat.svg" alt="" width="24" height="24"></span>
+            <h2 class="info-card__label">Day trip</h2>
+            <span class="info-card__number" aria-hidden="true">06</span>
+          </header>
+          <p class="info-card__title">The calanques by boat</p>
+          <p class="info-card__sub">Boats leave from the harbour</p>
+          <p class="info-card__text">See the cliffs and turquoise coves from the water. The easiest way to reach the calanques if you’d rather not hike.</p>
+          <p class="tip"><span class="eyebrow eyebrow--sm">Margaux’s tip</span>Bring a jacket. It’s always breezier out on the water.</p>
+        </article>
+
+        <article class="info-card info-card--olive" data-category="trip">
+          <header class="info-card__header">
+            <span class="info-card__icon"><img src="./assets/images/icon-cliff.svg" alt="" width="24" height="24"></span>
+            <h2 class="info-card__label">Day trip</h2>
+            <span class="info-card__number" aria-hidden="true">07</span>
+          </header>
+          <p class="info-card__title">Cap Canaille</p>
+          <p class="info-card__sub">15 min drive · Route des Crêtes</p>
+          <p class="info-card__text">A winding road along some of the highest sea cliffs in France, with huge views over Cassis and the bay.</p>
+          <p class="tip"><span class="eyebrow eyebrow--sm">Margaux’s tip</span>The road can close on very windy days. Ask us before you set off.</p>
+        </article>
+      </section>
+
+      <!-- Getting around -->
+      <aside class="notice" aria-labelledby="getting-around-title">
+        <span class="notice__icon"><img src="./assets/images/icon-pin.svg" alt="" width="20" height="20"></span>
+        <div>
+          <h2 class="notice__title" id="getting-around-title">Getting around</h2>
+          <p class="notice__text">Cassis train station sits about 3 km above the town, and a local bus runs down to the centre. Parking in the old town is tight, so leave the car at the house and walk.</p>
+        </div>
+      </aside>
+
+      <footer class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/okafor-onyedikachukwu-flourish">Okafor Onyedikachukwu Flourish</a>.
+      </footer>
+    </main>
+  </div>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
