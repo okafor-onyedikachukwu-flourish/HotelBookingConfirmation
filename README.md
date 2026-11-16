@@ -105,6 +105,20 @@ Every page shares the same sidebar. `script.js` checks whether each feature's el
 const checkIn = new Date(document.querySelector("[data-check-in]").dateTime);
 ```
 
+**Fluid sizes instead of breakpoint jumps.** Page padding, the space above the cards and the big headings use `clamp()`. They match the design at 375px and 1440px and grow smoothly in between:
+
+```css
+--gutter: clamp(1rem, 0.13328rem + 3.698vw, 2.5rem); /* 1rem at 375px, 2.5rem from 1024px */
+```
+
+**Logical properties.** The stylesheet uses `margin-block-start`, `padding-inline`, `inline-size` and so on instead of `margin-top`, `padding-left`, `width`. They look identical in English, but the layout would flip correctly for right-to-left languages.
+
+**Design tokens.** Every colour, font size and spacing value comes from a custom property (`--fs-14`, `--space-16`, `--terracotta-600`). Transparent shades are made with `color-mix()` from the same tokens:
+
+```css
+box-shadow: 0 30px 60px -24px color-mix(in srgb, var(--terracotta-600) 75%, transparent);
+```
+
 ### Continued development
 
 - Load the booking details from a JSON file instead of hardcoding them
