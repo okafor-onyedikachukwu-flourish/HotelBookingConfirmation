@@ -348,7 +348,9 @@ if (composer) {
 
     if (!hasDivider) addDivider();
     const bubble = addBubble(message);
-    bubble.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    // Smooth scrolling only if the guest hasn't asked to reduce motion
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    bubble.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "nearest" });
 
     input.value = "";
     autoGrow();
